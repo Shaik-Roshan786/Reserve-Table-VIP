@@ -1,0 +1,174 @@
+.add {
+    background: linear-gradient(90deg, #F56304 9.64%, #FCA311 100%);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 40px;
+position: absolute;
+width: 100px;
+height: 39px;
+left: 225px;
+top: 20px;
+color: white;
+// font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+color: white;
+margin-left: 30px;
+margin-top: -10px;
+}
+
+.btn-container {
+    margin-top: 10px;
+}
+
+.img {
+    height: 138px;
+    width: 127px;
+    border-radius: 20px;
+    left: 13px;
+top: 239px;
+}
+
+
+ion-item {
+    border: 1px solid rgb(252, 251, 251);
+    border-radius: 29px;
+    -webkit-box-shadow: 0 6px 4px -4px var(--ion-color-medium);
+    -moz-box-shadow: 0 6px 4px -4px var(--ion-color-medium);
+    box-shadow: 0 8px 4px -4px var(--ion-color-medium);
+    background-color: grey;
+}
+
+
+.ion-margin{
+   
+   
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 40px;
+box-sizing: border-box;
+width: 229px;
+height: 45px;
+
+margin-left: -10px;
+
+}
+
+
+// .horizontal-line {
+//     border-bottom: 1px solid black;
+//     width: 57px;
+// height: 4px;
+// left: calc(50% - 57px/2 + 7px);
+// top: 142px;
+// background: #F55B03;
+// border-radius: 5px;
+
+//     margin: 10px 0; /* Optional: Add margin for spacing */
+//   }
+  
+ion-modal {
+    --height: 85%;
+    --border-radius: 16px;
+    // --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --width:380px;
+    border-color: orange;
+    border:2px;
+  }
+  
+  ion-modal::part(backdrop) {
+    background: rgba(209, 213, 219);
+    opacity: 1;
+  }
+  
+  
+  .pop{
+    
+    // border:3px solid orange;
+    border: 1px solid #F55B03;
+border-radius: 15px;
+margin-top: 250px;
+// width: 353px;
+// height: 677px;
+// left: 42px;
+// top: 62px;
+
+  }
+  ion-item {
+    border: 1px solid rgb(252, 251, 251);
+    border-radius: 29px;
+    -webkit-box-shadow: 0 6px 4px -4px var(--ion-color-medium);
+    -moz-box-shadow: 0 6px 4px -4px var(--ion-color-medium);
+    box-shadow: 0 8px 4px -4px var(--ion-color-medium);
+    background-color: white;
+  }
+
+
+  .add {
+    background: linear-gradient(90deg, #F56304 9.64%, #FCA311 100%);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 40px;
+position: absolute;
+width: 97px;
+height: 39px;
+left: 225px;
+top: 20px;
+color: white;
+// font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+color: white;
+
+}
+
+
+.ion-margin{
+    // border:2px solid orange;
+    border: 1px solid #F55B03;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 40px;
+box-sizing: border-box;
+
+// // position: absolute;
+// width: 329px;
+height: 45px;
+width: 330px;
+margin-top: 10px;
+// top: 267px;
+
+}
+
+.ion-margin2 {
+    // border: 1px solid #F55B03;
+    // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    // border-radius: 40px;
+    // box-sizing: border-box;
+    // height: 45px;
+    // width: 230px;
+    // margin-top: 10px;
+    background: #FFFFFF;
+border: 1px solid rgba(0, 0, 0, 0.27);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+box-sizing: border-box;
+height: 45px;
+width: 230px;
+
+}
+
+ion-item {
+    border: 1px solid rgb(252, 251, 251);
+    border-radius: 29px;
+    -webkit-box-shadow: 0 6px 4px -4px var(--ion-color-medium);
+    -moz-box-shadow: 0 6px 4px -4px var(--ion-color-medium);
+    box-shadow: 0 8px 4px -4px var(--ion-color-medium);
+    background-color: white;
+  }
+
+  .horizontal-line {
+    border-bottom: 1px solid black;
+    margin: 20px 0; /* Optional: Add margin for spacing */
+  }
+  

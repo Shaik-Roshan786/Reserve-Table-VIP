@@ -1,0 +1,82 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon name="arrow-back-outline"></ion-icon>
+    <ion-title style="color: orange;">Today Specail(Veg)</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content >
+ <div class="btn-container">
+  <button style=" border: 1px solid grey; font-size: 15px; width: 65px;">Overview</button>
+  <button style="margin-left: 80px; border: 1px solid grey;font-size: 15px;width: 50px; border: 1px solid orange;">Menu</button>
+  <button style="margin-left: 70px;  border: 1px solid grey;font-size: 15px;width: 50px;">Rating</button>
+ </div>
+ <br>
+ <ion-header>
+ 
+ </ion-header>
+ <ion-content class="ion-padding">
+   <h4 id="open-modal" expand="block" style="text-align: right;"><a>Create</a> Your Own Business</h4>
+ 
+   <ion-modal #modal trigger="open-modal"  >
+     <ng-template>
+       <ion-content class="pop">
+         
+           
+             <div style="display: flex;flex-direction: row;justify-content: end;">
+             <button style="color: black;height: 30px;width: 50px; font-size: 15px;" (click)="modal.dismiss()">Close</button>
+            </div>
+           
+         
+       </ion-content>
+     </ng-template>
+   </ion-modal>
+ </ion-content>
+ <!-- <div>
+  <button id="open-modal" style="color: white; background-color: orangered; height: 30px; width: 100px; border-radius: 10px; margin-left: 250px;">+ Add Item</button>
+  
+  <ion-content class="ion-padding">
+   
+    
+    <ion-modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+      <ng-template>
+        <div  class="block">Block of Content</div>
+          <div style="display: flex; justify-content: space-between;">
+            <ion-text>Add Item</ion-text>
+            <ion-icon  name="close-outline"></ion-icon>
+          </div>
+         <hr>
+        <form >
+        <ion-label style="margin-left: 6%; font-weight: bold;">Image </ion-label>
+      <ion-item class="ion-margin">    
+        <ion-input  placeholder="Choose File"  type="text" clearInput="true" ></ion-input>
+      </ion-item>
+      <ion-label style="margin-left: 6%; font-weight: bold;">Title</ion-label>
+      <ion-item class="ion-margin">    
+        <ion-input   placeholder="Item Title"   type="text" clearInput="true" ></ion-input>
+      </ion-item>
+      <ion-label style="margin-left: 6%; font-weight: bold;">Type </ion-label>
+      <ion-item class="ion-margin">    
+        <ion-input a  placeholder=""  type="type" clearInput="true" ></ion-input>
+      </ion-item>
+      <ion-label style="margin-left: 6%; font-weight: bold;">Price</ion-label>
+      <ion-item class="ion-margin">    
+        <ion-input   placeholder="Item Price"   type="text" clearInput="true" ></ion-input>
+      </ion-item>
+      <ion-label style="margin-left: 6%; font-weight: bold;">Ingrediants</ion-label>
+      <ion-item class="ion-margin">    
+        <ion-input a  placeholder="Name of Ingrediants"  type="text" clearInput="true" ></ion-input>
+      </ion-item>
+      <ion-label style="margin-left: 6%; font-weight: bold;">Category</ion-label>
+      <ion-item class="ion-margin">    
+        <ion-input   placeholder="Item Category"   type="text" clearInput="true" ></ion-input>
+      </ion-item>
+    </form>
+      <button type="submit" style="border-radius: 10px; border: 1px solid orange; width: 100px; height: 30px; margin-left: 250px;">Submit</button>
+      
+      </ng-template>
+    </ion-modal>
+  </ion-content>
+</div> -->
+
+</ion-content>

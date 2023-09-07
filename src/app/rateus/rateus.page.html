@@ -1,0 +1,134 @@
+<ion-content class="ion-padding">
+  <button style="color: white;background: linear-gradient(90deg, #F55B03 11.33%, #FCA311 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;font-weight: 700;margin-left: 100px;  height: 30px; width: 100px;" id="open-modal" expand="block">Rate Us</button>
+
+
+<ion-card-content *ngFor="let comment of comments">
+  <ion-card>
+  <p>{{comment.comment}}</p>
+
+  <br>
+  <button  id="open-modalreply" expand="block" >Reply</button>
+  <ion-modal trigger="open-modalreply" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+    <ng-template>
+      
+     <ion-card style="padding: 10px;margin-bottom: -5px;  border-bottom-left-radius: 20%;border-bottom-right-radius: 20%; height: 250px;">
+      
+   
+     
+      <ion-textarea style="border: 1px solid orange; height: 100px;" placeholder="Share details of your own experience at this place upto 500 words"></ion-textarea>
+      <br>
+     <button style="background-color: white; color: black;border: 1px solid #F55B03;
+      border-radius: 9px; height: 30px; width: 70px; margin-left: 230px;color: #000000;" (click)="submit()" >send</button>
+      <br>
+      <br>
+    </ion-card>
+    </ng-template>
+    
+  </ion-modal>
+  
+  
+  
+</ion-card>
+</ion-card-content>
+
+
+
+
+<div>
+<button style="margin-top: 100px; height: 30px; width: 100px;"  (click)="get()" >get comments</button>
+</div>
+  <ion-modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+    <ng-template>
+      
+     <ion-card style="padding: 10px;margin-bottom: -5px;  border-bottom-left-radius: 20%;border-bottom-right-radius: 20%; height: 250px;">
+      <div style="display: flex;">
+      <ion-label style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-weight: 600;color: #000000;">Give Us Rating</ion-label>
+      <div style="margin-top: -10px; margin-left: 10px;">
+        <ion-icon style="margin-left: 10px; margin-top: 10px;" name="star-outline"></ion-icon>
+        <ion-icon style="margin-left: 5px; margin-top: 10px;" name="star-outline"></ion-icon>
+        <ion-icon style="margin-left: 5px; margin-top: 10px;" name="star-outline"></ion-icon>
+        <ion-icon style="margin-left: 5px; margin-top: 10px;" name="star-outline"></ion-icon>
+        <ion-icon style="margin-left: 5px; margin-top: 10px;" name="star-outline"></ion-icon>
+      </div>
+      <button  class="close" (click)="setOpen(false)">Close</button>
+    </div>
+   
+      <br>
+      <ion-label style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-weight: 600;color: #000000;">Comment:</ion-label>
+      <br>
+      <br>
+      <ion-textarea style="border: 1px solid orange; height: 100px;" placeholder="Share details of your own experience at this place upto 500 words"></ion-textarea>
+      <br>
+     <button style="background-color: white; color: black;border: 1px solid #F55B03;
+      border-radius: 9px; height: 30px; width: 70px; margin-left: 230px;color: #000000;" (click)="submit()" >post</button>
+      <br>
+      <br>
+    </ion-card>
+    </ng-template>
+    
+  </ion-modal>
+</ion-content>
+
+
+
+<!-- 
+<ion-content class="ion-padding">
+  <button style="color: white;background: linear-gradient(90deg, #F55B03 11.33%, #FCA311 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;font-weight: 700;margin-left: 100px;  height: 30px; width: 100px;" id="open-modal" expand="block">Rate Us</button>
+
+  <ion-card-content *ngFor="let comment of comments">
+    <ion-card>
+      <p>{{comment.comment}}</p>
+      <br>
+      <button (click)="openReplyModal(comment.id)" expand="block">Reply</button>
+    </ion-card>
+  </ion-card-content>
+
+  <div>
+    <button style="margin-top: 100px; height: 30px; width: 100px;" (click)="get()">Get Comments</button>
+  </div>
+
+  <ion-modal *ngFor="let comment of comments" [trigger]="comment.id" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+    <ng-template>
+      <ion-card style="padding: 10px;margin-bottom: -5px; border-bottom-left-radius: 20%;border-bottom-right-radius: 20%; height: 250px;">
+        <ion-textarea style="border: 1px solid orange; height: 100px;" placeholder="Share details of your own experience at this place up to 500 words"></ion-textarea>
+        <br>
+        <button style="background-color: white; color: black;border: 1px solid #F55B03;
+          border-radius: 9px; height: 30px; width: 70px; margin-left: 230px;color: #000000;" (click)="submitReply(comment.id)">Send</button>
+        <br>
+        <br>
+      </ion-card>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal [trigger]="'open-modal'" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+    <ng-template>
+      <ion-card style="padding: 10px;margin-bottom: -5px; border-bottom-left-radius: 20%;border-bottom-right-radius: 20%; height: 250px;">
+        <div style="display: flex;">
+          <ion-label style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-weight: 600;color: #000000;">Give Us Rating</ion-label>
+          <div style="margin-top: -10px; margin-left: 10px;">
+            <ion-icon style="margin-left: 10px; margin-top: 10px;" name="star-outline"></ion-icon>
+            <ion-icon style="margin-left: 5px; margin-top: 10px;" name="star-outline"></ion-icon>
+            <ion-icon style="margin-left: 5px; margin-top: 10px;" name="star-outline"></ion-icon>
+            <ion-icon style="margin-left: 5px; margin-top: 10px;" name="star-outline"></ion-icon>
+            <ion-icon style="margin-left: 5px; margin-top: 10px;" name="star-outline"></ion-icon>
+          </div>
+          <button class="close" (click)="setOpen(false)">Close</button>
+        </div>
+        <br>
+        <ion-label style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-weight: 600;color: #000000;">Comment:</ion-label>
+        <br>
+        <br>
+        <ion-textarea style="border: 1px solid orange; height: 100px;" placeholder="Share details of your own experience at this place up to 500 words"></ion-textarea>
+        <br>
+        <button style="background-color: white; color: black;border: 1px solid #F55B03;
+          border-radius: 9px; height: 30px; width: 70px; margin-left: 230px;color: #000000;" (click)="submit()">Post</button>
+        <br>
+        <br>
+      </ion-card>
+    </ng-template>
+  </ion-modal>
+</ion-content> -->

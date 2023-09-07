@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>like</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <button style="color: white; height: 30px; width: 100px; background-color: orange;" (click)="get()" >Get</button>
+  <br>
+
+  
+                                                              
+
+  <ion-icon  name="heart-outline"></ion-icon>
+
+ <ng-container *ngIf="postIds.length > 0; else noPosts">
+  <ion-card>
+    <ion-card-content>
+  <ul>
+    <li *ngFor="let postId of postIds">
+      <ion-icon name="heart-outline"></ion-icon> {{ postId }}
+    </li>
+  </ul>
+</ion-card-content>
+</ion-card>
+</ng-container>
+
+<ng-template #noPosts>
+  <p>No post IDs found.</p>
+</ng-template>
+
+<ng-container *ngIf="postIds.length > 0; else noPosts">
+  <ion-card *ngFor="let postId of postIds">
+    <ion-card-content>
+      <ion-icon name="heart-outline" (click)="toggleLike(postId)"></ion-icon>
+      {{ postId }}
+    </ion-card-content>
+  </ion-card>
+</ng-container>
+
+<ng-template #noPosts>
+  <p>No post IDs found.</p>
+</ng-template>
+
+
+
+
+
+
+
+
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-content>
+  <br>
+  <div style="display: flex;">
+  <ion-icon style="font-size: 25px;" name="arrow-back-outline"></ion-icon>
+  <ion-title style="font-size: 20px; color: orange; font-weight: 600; text-align: center; margin-left: -10%;">QR Code</ion-title>      
+  </div>
+  <br>
+  <ion-segment  value="default">
+    <ion-segment-button value="default">
+      <button style="font-family: sans-serif; font-size: 15px; border-radius: 8px; border: 2px solid orange; height: 35px; width: 150px; font-weight: 600;background-color: white;">Generate QR Code</button>
+    </ion-segment-button>
+    <ion-segment-button  value="segment">
+      <button style="font-family: sans-serif; font-size: 15px; border-radius: 8px; border: 2px solid grey; height: 35px; width: 150px; font-weight: 600;background-color: white;">Scan QR Code</button>
+    </ion-segment-button>
+  </ion-segment>
+  <br>
+
+  <ion-card-content style="border: 1px solid orange; height: 65%; width: 90%; margin-left: 5%; border-radius: 8px;">
+    <img style="width: 350px;height: 350px;" src="data:image/png;base64,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"/>
+  </ion-card-content>
+
+</ion-content>

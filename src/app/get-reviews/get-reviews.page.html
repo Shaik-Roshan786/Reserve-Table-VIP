@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>get-reviews</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card style="height: 33%;width: 94%; background-image: url('https://media.istockphoto.com/id/1425839231/photo/luxurious-interior-of-traditional-english-restaurant.webp?b=1&s=170667a&w=0&k=20&c=AMkhtcu2FGZAJkjK0_r9LXXQHvLXHsoZ8VbFhzxSZlM=');">
+    <div style="display: flex;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Priyanka-chopra-gesf-2018-7565.jpg" class="card-img-top" style="height: 17%;width: 12%;border-radius: 50%;padding: 5px;">
+    <ion-text class="name">Priyanka Kupaa</ion-text>
+    <div style="margin-left: 100px; margin-top: 20px;">
+    <ion-icon style="width: 18px;
+    height: 20px;
+    flex-shrink: 0; color: white;" name="create-outline"></ion-icon>
+    <ion-icon style="width: 18px;
+    height: 20px;
+    flex-shrink: 0; color: white; margin-left: 10px;" name="trash-outline"></ion-icon>
+    </div>
+  </div>
+  
+  </ion-card>
+  <div class="review">
+    <ion-text >I tasted this cocktail.It was awesome <br>
+      #Prism</ion-text>
+      
+     <div style="float: right; font-size: 25px; margin-right: 1rem; margin-top: -2%;">
+      <ion-icon name="share-outline"></ion-icon>
+      <ion-icon  id="open-modalreply" expand="block" style="margin-left: 10px;" name="chatbubble-outline"></ion-icon>
+      <ion-modal style="margin-top: 40%;" trigger="open-modalreply" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+        <ng-template>
+         <ion-card style="padding: 10px;margin-bottom: -5px;   height: 100%;">
+          <button routerLink="/get-reviews" >X</button>
+          <p class="text">Comments:</p>
+          
+          <ion-label class="text2" >Add a Comment...</ion-label>
+          <br>
+          <br>
+          
+          <ion-item style="border: 1px solid orange; height: 20%" placeholder="Share details of your own experience at this place upto 500 words"></ion-item>
+          <br>
+         <button style="background-color: white; color: white;border: 1px solid #F55B03;
+          border-radius: 9px; height: 30px; width: 70px; margin-left: 230px; background-color: orange;" (click)="post()" >Post</button>
+          <br>
+          <br>
+          <div class="gh" style="display: flex;">
+          
+          <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+          <p>Vyshu_Baruri</p>
+          </div>
+          <h6 style="color: orange;">Nice</h6>
+          <div class="gh" style="display: flex;">
+          
+            <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+            <p>Sandeep Pagolu</p>
+            </div>
+            <h6 style="color: orange;">Good</h6>
+            <div class="gh" style="display: flex;">
+          
+              <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+              <p>Sai Orumpati</p>
+              </div>
+              <h6 style="color: orange;">Fanstatic</h6>
+        </ion-card>
+        </ng-template>
+        
+      </ion-modal>
+    </div>
+    </div>
+</ion-content>

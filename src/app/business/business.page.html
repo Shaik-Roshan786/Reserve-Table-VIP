@@ -1,0 +1,78 @@
+<ion-header>
+ 
+</ion-header>
+<ion-content class="ion-padding">
+ <h4 id="open-modal" expand="block" style="text-align: right; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><a>Create</a> Your Own Business</h4>
+
+  <ion-modal #modal trigger="open-modal"  >
+    <ng-template>
+      <ion-content class="pop" style="overflow-y: scroll;">
+        
+        
+            <div style="display: flex;flex-direction: row;">
+              <h1 style="margin-left: 20px;font-size: 20px;margin-top: 10px;margin-right: 150px;font-family: 
+              system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color: orange; white-space: nowrap;font-weight: 600;">Create Business</h1>
+            <button style="color: black;height: 30px;width: 50px; font-size: 15px;margin-top: 10px;" (click)="modal.dismiss()"><ion-icon name="close"></ion-icon></button>
+           </div>
+           <div style="margin-left: -20px; padding-left: 10px; padding-right: 10px;">
+           <h1 style="margin-left: 35px;color:black;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 20px;font-weight: 600;">Type of Business</h1>
+           <ion-item class="drop">
+            
+            <ion-label>Choose Your business type</ion-label>
+            <ion-select id="businessType" interface="popover" class="custom-select">
+              <ion-select-option value="1">Option 1</ion-select-option>
+              <ion-select-option value="2">Option 2</ion-select-option>
+              <ion-select-option value="3">Option 3</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <h1 style="margin-left: 35px;color:black;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 20px;font-weight: 600;">Name of Your  Business</h1>
+          
+         
+          <ion-item class="drop">
+            
+            <ion-input type="text" placeholder="Enter your business name"></ion-input>
+          </ion-item>
+
+          <h1 style="margin-left: 35px;color:black;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size: 20px;font-weight: 600;">Branch Address</h1>
+          
+         
+          <ion-item class="drop">
+            
+            <ion-input type="text" placeholder="Enter Full Address with Zip code"></ion-input>
+          </ion-item>
+
+          <h1 style="margin-left: 35px;color:black;font-family:Montserrat ;font-size: 20px;font-weight: 600;">Country</h1>
+          <ion-item class="drop">
+            
+            <ion-input type="text" placeholder="Enter Your Country"></ion-input>
+          </ion-item>
+
+          
+          <h1 style="margin-left: 35px;color:black;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size: 20px;font-weight: 600;">Size of Your Entity</h1>
+          <ion-item class="drop">
+            
+            <ion-input type="text" placeholder="In Square Feets"></ion-input>
+          </ion-item>
+
+
+          <h1 style="margin-left: 35px;color:black;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size: 20px;font-weight: 600;">Capacity of Your Entity</h1>
+          <ion-item class="drop">
+            
+            <ion-input type="text" placeholder="No of Customers can Occupy"></ion-input>
+          </ion-item>
+
+
+          <h1 style="margin-left: 35px;color:black;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;font-size: 20px;font-weight: 600;">Tables</h1>
+          <ion-item class="drop">
+            
+            <ion-input type="text" placeholder="No of Tables Vailable"></ion-input>
+          </ion-item>
+          <button class="create">create</button>
+        </div>
+
+        
+           
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

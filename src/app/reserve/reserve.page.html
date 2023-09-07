@@ -1,0 +1,80 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>reserve</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <button class="add" id="open-modal" expand="block" >+ Add Item </button>
+  <ion-modal #modal trigger="open-modal"  >
+    <ng-template>
+      <ion-content class="pop">
+        
+        <button (click)="modal.dismiss()" style=" font-weight: 600;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 15px; height: 20px; width: 40px; margin-left: 300px;" >Close</button>
+        <h1 class="heading">Reserve a table</h1>
+        <p style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 600;
+        font-size: 16px;">Book a Table:</p>
+      
+        <div style="display: flex;">
+        <div style="display: flex;">
+        <ion-input>Date</ion-input>
+        <ion-icon style="margin-right: 250px;" name="calendar-outline"></ion-icon>
+      </div>
+      <div class="horizontal-line"></div>
+      <div style="display: flex;">
+        <ion-input>Time</ion-input>
+        <ion-icon  style="margin-right: 250px;" name="time-outline"></ion-icon>
+      </div>
+    
+    </div>
+    <div class="horizontal-line4"></div>
+    <div class="horizontal-line5"></div>
+    
+    <br>
+    <br>
+        <div style="display: flex; margin-top: -30px; ">
+        <p style="margin-left: 20px; font-weight: 600;white-space: nowrap;">Number of Guests:</p>
+        <ion-buttons style="margin-left: 30px; width: 141px; border-radius: 33px; border: 1px solid orange">
+          <ion-button style="margin-left: 20px;width: 30px;height: 25px; box-shadow: 0px 4px 8.99999px rgba(0, 0, 0, 0.25); border-radius: 5px;background: #FFFFFF;" (click)="decreaseQuantity()">-</ion-button>
+          <ion-label style="padding-left: 5px;padding-right: 5px;">{{ quantity }}</ion-label>
+         
+          <ion-button (click)="increaseQuantity()" style="margin-left: 10px; width: 30px;height: 25px;  box-shadow: 0px 4px 8.99999px rgba(0, 0, 0, 0.25); border-radius: 5px;background: #FFFFFF;">+</ion-button>
+        
+          <!-- <p class="horizontal-line6"></p> -->
+        </ion-buttons>
+       
+      </div>
+      
+        <div style="display: flex;">
+        <p style="margin-left: 100px;white-space: nowrap;">Table Location</p>
+        
+        
+
+        <ion-select style="margin-right: 250px;" label-placement="floating" >
+        
+        </ion-select>
+        
+      </div>
+      <div class="horizontal-line3"></div>
+      <br>
+        <ion-label style="margin-left: 6%; font-weight: 600; font-size: 16px;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Contact Details </ion-label>
+            <ion-item class="ion-margin">    
+              <ion-input a  placeholder="Mobile Number"  type="text" clearInput="true" ></ion-input>
+            </ion-item>
+            <ion-label style="margin-left: 6%; font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Specail Requirements</ion-label>
+            <ion-item class="ion-margin">    
+              <ion-input   placeholder="Enter upto 50 words"  type="text" clearInput="true" ></ion-input>
+            </ion-item>
+            <br>
+          
+      
+      
+        <button style="font-weight: 700;
+        font-size: 16px; color: white ; background: linear-gradient(90deg, #F55B03 37.77%, #FCA311 100%); border-radius: 10px; height: 40px; width: 209px; margin-left: 80px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Book Table</button>
+        
+        
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

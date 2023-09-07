@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card  style="border-radius: 8px;">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <div style="width: 200px;">
+            <input type="radio"/>
+            <label style="font-size: 20px; font-weight: bold; margin-top: 0px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Veg Soup</label> 
+            <p style="font-size: 30px; font-weight: bold; margin-top: 0px; font-weight:bold; font-size: 15px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">$15</p>
+            <h5 style="font-size: 20px; font-weight: bold; margin-top: 0px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><a>Type:</a>Veg</h5>
+            <!-- <h5 style="margin-top: 0px; font-size: 15px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;"><a>Ingredients:</a>Corn, Corn Flour, Water, Coriander Leaves, Carrot, Capsicum</h5> -->
+                <a style="font-size: 20px;" id="open-modal" expand="block">Ingredients</a>
+            <ion-content class="ion-padding">
+              <ion-modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+                <ng-template>
+                  <div class="block">Corn, Corn Flour, Water, Coriander Leaves, Carrot, Capsicum</div>
+                </ng-template>
+              </ion-modal>
+            </ion-content>
+          </div>
+        </ion-col>
+  
+        <ion-col size="8">
+          <div>
+            <img src="https://recipesofhome.com/wp-content/uploads/2020/03/vegetable-soup-recipe.jpg" class="img" />
+            <!-- <h4 style="margin-left: 120px;margin-top: 0px;">Quantity</h4> -->
+            <ion-buttons slot="end" style="width:400px;" *ngIf="hide">
+              <ion-button style="margin-left: 130px;width: 30px;height: 25px; box-shadow: 1px 1px 1px 1px #c9c5c5; border-radius: 18px;" (click)="decreaseQuantity()">-</ion-button>
+              <ion-label style="padding-left: 5px;padding-right: 5px;">{{ quantity }}</ion-label>
+              <ion-button (click)="increaseQuantity()" style="width: 30px;height: 25px;box-shadow: 1px 1px 1px 1px #c9c5c5; border-radius: 18px;">+</ion-button>
+            </ion-buttons>
+           
+            <button *ngIf="add" (click)="cart()" style="background: rgba(206, 206, 206, 0.3); color: #0024C6;font-size: 15px;height: 30px;width: 100px;margin-left: 110px;border-radius: 10px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">Add to cart</button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  
+</ion-content>

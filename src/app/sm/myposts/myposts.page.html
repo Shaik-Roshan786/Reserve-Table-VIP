@@ -1,0 +1,242 @@
+<ion-content>
+  <div style="display: flex; margin-top: 4%; padding-left: 5%;">
+   
+    <ion-label class="heading" >Reviews</ion-label>
+    <div style=" float: right; font-size: 150%; margin-left: 40%;">
+    <ion-icon name="qr-code-outline"></ion-icon>
+    <ion-icon style="margin-left: 10px;" name="notifications-outline"></ion-icon>
+    <ion-icon style="margin-left: 10px;" name="cart-outline"></ion-icon>
+  </div>
+  </div>
+    <br>
+    <div style="justify-content: space-between;">
+    <!-- <button class="All">All Posts</button>
+    <button class="My">My Posts</button> -->
+    <ion-segment  color="warning" value="success">
+      <ion-segment-button (click)="show()" value="success">
+        <ion-label class="All">All Posts</ion-label>
+      </ion-segment-button>
+      <ion-segment-button (click)="show()" value="segment">
+        <ion-label class="My">My Posts</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+    <ion-icon style="margin-top: 1%; font-size: 180%;  background-color: orange; border-radius: 30px; color: white; float: right; margin-right: 1rem;" name="add-outline"></ion-icon>
+    <br>
+    <br>
+   
+  <ion-card>
+    <div style="display: flex;position: absolute;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9FMLc7boTJklzzNOUP6ZUY-aCnFAbKouZXA&usqp=CAU" class="card-img-top" style="border: 1px solid orange; border-radius: 50%;padding: 5px;width: 47px;
+      height: 50px;">
+      <ion-text style="padding: 3%; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold; color: white; white-space: nowrap;">Priyanka Kupaa</ion-text>
+      <div style="display: flex; margin-left: 100px; margin-top: 10px;">
+      <ion-icon id="open-modal" expand="block" style="font-size: 25px; flex-shrink: 0; color: white;" name="create-outline"></ion-icon>
+      <ion-modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+        <ng-template>
+          <!-- <div class="block">Block of Content</div> -->
+          <ion-card-content style="display: flex;">
+          <p style="font-weight: 600;padding-left: 2%;white-space: nowrap;">Edit Review</p>
+          <p style="float: right; margin-top: 0px; margin-left: 70%;font-size: 18px;" (click)="modal.dismiss()" >X</p>
+        </ion-card-content>
+          <ion-textarea style="margin-left: 5%; border: 1px solid orange;width: 90%;" placeholder="Share details of your own experience at this place upto 500 words" ></ion-textarea>
+          <br>
+          <button style="margin-left: 80%; border: 1px solid orange; height: 30px; width: 40px;border-radius: 10px;">Post</button>
+        <br>
+        </ng-template>
+      </ion-modal>
+      <ion-icon  id="open-custom-dialog" expand="block" style="font-size: 25px; flex-shrink: 0; color: white; margin-left: 10px;" name="trash-outline"></ion-icon>
+      <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+        <ng-template>
+          <div class="wrapper">
+            <p style="float: right; margin-top: 0px; margin-right: 2%;" (click)="modal.dismiss()" >X</p>
+           
+              <p style="padding: 5px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Are You Sure you want to Delete &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this post?</p>
+              <ion-card-content>
+                <button style="color: white; background-color: #F55B03; height: 20px; width: 40px; border-radius: 10px; margin-left: 20%;">Yes</button>
+                <button style="float: right; color: black; height: 20px; width: 40px; border-radius: 10px; border: 1px solid orange; margin-right: 30%;">No</button>
+              </ion-card-content>
+          </div>
+        </ng-template>
+      </ion-modal>
+    
+    </div>
+    </div>
+    <img alt="Silhouette of mountains" src="https://media.istockphoto.com/id/1425839231/photo/luxurious-interior-of-traditional-english-restaurant.webp?b=1&s=170667a&w=0&k=20&c=AMkhtcu2FGZAJkjK0_r9LXXQHvLXHsoZ8VbFhzxSZlM=" />
+  
+  
+    <ion-card-content style="border: 1px solid orange; ">
+      <div class="review">
+        <ion-text >I tasted this cocktail.It was awesome <br>
+          <a>#Prism</a></ion-text>
+          
+         <div style="float: right; font-size: 25px; margin-top: -2%;">
+          <ion-icon name="share-outline"></ion-icon>
+          <ion-icon  id="open-modalreply" expand="block" style="margin-left: 10px;" name="chatbubble-outline"></ion-icon>
+          <ion-modal style="margin-top: 40%;" trigger="open-modalreply" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+            <ng-template>
+             <ion-card style="padding: 10px;margin-bottom: -5px;   height: 100%; overflow-y: scroll;">
+              
+              <button routerLink="/get-review" style="margin-left: 95%;" >X</button>
+              
+              <p class="text">Comments:</p>
+              
+              <ion-label class="text2" >Add a Comment...</ion-label>
+              <br>
+              <br>
+              
+              <ion-textarea style="border: 1px solid orange; height: 20%" placeholder="Share details of your own experience at this place upto 500 words"></ion-textarea>
+              <br>
+             <button style="background-color: white; color: white;border: 1px solid #F55B03;
+              border-radius: 9px; height: 30px; width: 70px; margin-left: 230px; background-color: orange;" (click)="post()" >Post</button>
+              <br>
+              <br>
+              <div class="gh" style="display: flex;">
+              
+              <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+              <p style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black;">Vyshu_Baruri</p>
+              </div>
+              <p >Nice</p>
+              <div class="gh" style="display: flex;">
+              
+                <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+                <p style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black;">Sandeep Pagolu</p>
+                </div>
+                <p >Good</p>
+                <div class="gh" style="display: flex;">
+              
+                  <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+                  <p style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black;">Sai Orumpati</p>
+                  </div>
+                  <p >Fanstatic</p>
+                  
+                 
+            </ion-card>
+            </ng-template>
+            
+          </ion-modal>
+        </div>
+        </div>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <div style="display: flex;position: absolute;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9FMLc7boTJklzzNOUP6ZUY-aCnFAbKouZXA&usqp=CAU" class="card-img-top" style="border: 1px solid orange; border-radius: 50%;padding: 5px;width: 47px;
+      height: 50px;">
+      <ion-text style="padding: 3%; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold; color: white; white-space: nowrap;">Priyanka Kupaa</ion-text>
+      <div style="display: flex; margin-left: 100px; margin-top: 10px;">
+      <ion-icon style="font-size: 25px; flex-shrink: 0; color: white;" name="create-outline"></ion-icon>
+      <ion-icon style="font-size: 25px; flex-shrink: 0; color: white; margin-left: 10px;" name="trash-outline"></ion-icon>
+      </div>
+    </div>
+    <img alt="Silhouette of mountains" src="https://media.istockphoto.com/id/1425839231/photo/luxurious-interior-of-traditional-english-restaurant.webp?b=1&s=170667a&w=0&k=20&c=AMkhtcu2FGZAJkjK0_r9LXXQHvLXHsoZ8VbFhzxSZlM=" />
+  
+  
+    <ion-card-content style="border: 1px solid orange; ">
+      <div class="review">
+        <ion-text >I tasted this cocktail.It was awesome <br>
+          <a>#Prism</a></ion-text>
+          
+         <div style="float: right; font-size: 25px; margin-top: -2%;">
+          <ion-icon name="share-outline"></ion-icon>
+          <ion-icon  id="open-modalreply" expand="block" style="margin-left: 10px;" name="chatbubble-outline"></ion-icon>
+          <ion-modal style="margin-top: 40%;" trigger="open-modalreply" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+            <ng-template>
+             <ion-card style="padding: 10px;margin-bottom: -5px;   height: 100%; overflow-y: scroll;">
+              
+              <button routerLink="/get-review" style="margin-left: 95%;" >X</button>
+              
+              <p class="text">Comments:</p>
+              
+              <ion-label class="text2" >Add a Comment...</ion-label>
+              <br>
+              <br>
+              
+              <ion-textarea style="border: 1px solid orange; height: 20%" placeholder="Share details of your own experience at this place upto 500 words"></ion-textarea>
+              <br>
+             <button style="background-color: white; color: white;border: 1px solid #F55B03;
+              border-radius: 9px; height: 30px; width: 70px; margin-left: 230px; background-color: orange;" (click)="post()" >Post</button>
+              <br>
+              <br>
+              <div class="gh" style="display: flex;">
+              
+              <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+              <p style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black;">Vyshu_Baruri</p>
+              </div>
+              <p >Nice</p>
+              <div class="gh" style="display: flex;">
+              
+                <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+                <p style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black;">Sandeep Pagolu</p>
+                </div>
+                <p >Good</p>
+                <div class="gh" style="display: flex;">
+              
+                  <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+                  <p style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black;">Sai Orumpati</p>
+                  </div>
+                  <p >Fanstatic</p>
+                  <div class="gh" style="display: flex;">
+              
+                    <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+                    <p style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black;">Sai Orumpati</p>
+                    </div>
+                    <p >Fanstatic</p>
+                    <div class="gh" style="display: flex;">
+              
+                      <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+                      <p style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black;">Sai Orumpati</p>
+                      </div>
+                      <p >Fanstatic</p>
+                      <div class="gh" style="display: flex;">
+              
+                        <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+                        <p style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black;">Sai Orumpati</p>
+                        </div>
+                        <p >Fanstatic</p>
+                        <div class="gh" style="display: flex;">
+              
+                          <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+                          <p style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black;">Sai Orumpati</p>
+                          </div>
+                          <p >Fanstatic</p>
+                          <div class="gh" style="display: flex;">
+              
+                            <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+                            <p style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black;">Sai Orumpati</p>
+                            </div>
+                            <p >Fanstatic</p>
+                             <div class="gh" style="display: flex;">
+              
+                  <ion-icon style="font-size: 40px;" name="person-circle-outline"></ion-icon> &nbsp;&nbsp;
+                  <p style="font-weight: bold; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: black;">Sai Orumpati</p>
+                  </div>
+                  <p >Fanstatic</p>
+            </ion-card>
+            </ng-template>
+            
+          </ion-modal>
+        </div>
+        </div>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+ 
+
+  </ion-content>
+  

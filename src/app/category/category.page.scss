@@ -1,0 +1,22 @@
+ion-modal {
+    --height: 35%;
+    --border-radius: 16px;
+    //--box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --width:80vw;
+    --border:10px solid orange;
+  }
+  
+  ion-modal::part(backdrop) {
+    background: rgba(209, 213, 219);
+    opacity: 1;
+  }
+  
+  ion-modal ion-toolbar {
+    
+    --color:black;
+  }
+  .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,0 +1,119 @@
+
+
+.heading {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 18px;
+font-weight: 600;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: left;
+color: orange;
+white-space: nowrap;
+margin-right: 10%;
+// color: linear-gradient(#F55B03, #FCA311);
+
+}
+
+.All {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-left: 10%;
+    height: 35px;
+width: 130px;
+border: 1px solid green;
+border-radius: 10px;
+color: black;
+background-color: white;
+padding: 5px;
+}
+.My {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-left: 10%;
+    height: 35px;
+width: 130px;
+border: 1px solid orange;
+border-radius: 10px;
+color: black;
+background-color: white;
+padding: 5px;
+}
+
+// .card1 {
+// // width: 335px;
+// // height: 281px;
+// // flex-shrink: 0;
+// //background: url('https://media.istockphoto.com/id/1425839231/photo/luxurious-interior-of-traditional-english-restaurant.webp?b=1&s=170667a&w=0&k=20&c=AMkhtcu2FGZAJkjK0_r9LXXQHvLXHsoZ8VbFhzxSZlM='), lightgray 50% / cover no-repeat;
+// }
+
+.img {
+    height: 50px;
+    width: 50px;
+    border-radius: 80px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.name {
+    color: #FFF;
+font-size: 14px;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: 700;
+margin-top: 20px;
+margin-left: 10px;
+}
+
+.review {
+    margin-left: 15px;
+    
+    margin-top: -10px;
+    margin-left: 10px;
+    width: 94%;
+    height: 7%;
+}
+
+ion-modal#example-modal {
+    --width: 50%;
+    --min-width: 250px;
+    --height: fit-content;
+    --border-radius: 6px;
+    --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+  }
+  
+  ion-modal#example-modal h1 {
+    margin: 20px 20px 10px 20px;
+  }
+  
+  ion-modal#example-modal ion-icon {
+    margin-right: 6px;
+  
+    width: 48px;
+    height: 48px;
+  
+    padding: 4px 0;
+  
+    color: #aaaaaa;
+  }
+  
+  ion-modal#example-modal .wrapper {
+    margin-bottom: 10px;
+  }
+
+  .block {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  ion-modal {
+    --height: auto;
+  }

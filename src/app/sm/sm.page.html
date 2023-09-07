@@ -1,0 +1,100 @@
+<ion-content>
+<div style="display: flex; margin-top: 4%;">
+  <ion-icon name="arrow-back-outline"></ion-icon> &nbsp;&nbsp;&nbsp;
+  <ion-label class="heading" >Social Media Content</ion-label>
+  <div style=" float: right; font-size: 150%;">
+  <ion-icon name="qr-code-outline"></ion-icon>
+  <ion-icon style="margin-left: 10px;" name="notifications-outline"></ion-icon>
+  <ion-icon style="margin-left: 10px;" name="cart-outline"></ion-icon>
+</div>
+</div>
+  <br>
+  <div style="justify-content: space-between;">
+  <button class="All">All Posts</button>
+  <button class="My">My Posts</button>
+</div>
+  <ion-icon style="font-size: 180%;  background-color: orange; border-radius: 30px; color: white; float: right; margin-right: 1rem;" name="add-outline"></ion-icon>
+  <br>
+  <br>
+  <ion-card style="border-radius: 10px; height: 33%;width: 94%; background-image: url('https://media.istockphoto.com/id/1425839231/photo/luxurious-interior-of-traditional-english-restaurant.webp?b=1&s=170667a&w=0&k=20&c=AMkhtcu2FGZAJkjK0_r9LXXQHvLXHsoZ8VbFhzxSZlM=');">
+    <div style="display: flex;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Priyanka-chopra-gesf-2018-7565.jpg" class="card-img-top" style="height: 17%;width: 12%;border-radius: 50%;padding: 5px;">
+    <ion-text class="name">Priyanka Kupaa</ion-text>
+    <div style="margin-left: 30%; margin-top: 6%;">
+    <ion-icon style="width: 18px;height: 20px;flex-shrink: 0; color: white;" name="create-outline"></ion-icon>
+    <ion-icon style="width: 18px;height: 20px;flex-shrink: 0; color: white; margin-left: 10px;" name="trash-outline"></ion-icon>
+    </div>
+  </div>
+ 
+  </ion-card>
+  <div class="review">
+  <ion-text >I tasted this cocktail.It was awesome <br>
+     <a>#Prism</a></ion-text>
+     <button style="margin-left: 20%;" (click)="get()" >get</button>
+    
+   <div style="display: flex; float: right; font-size: 25px; margin-right: 1rem; margin-top: 1%;">
+    <!-- <ion-icon  [name]="isLiked ? 'heart' : 'heart-outline'" [color]="isLiked ? 'danger' : 'medium'" (click)="likePost()" name="heart-outline"></ion-icon> -->
+    <ion-icon [name]="isLiked ? 'heart' : 'heart-outline'" [color]="isLiked ? 'danger' : 'medium'" (click)="likePost()" name="heart-outline"></ion-icon>
+
+    <!-- <ion-icon [name]="isLiked ? 'heart' : 'heart-outline'" [color]="isLiked ? 'danger' : 'medium'" (click)="likePost()"></ion-icon>
+<span>{{ likedBy }}</span> -->
+
+
+    
+    <ion-icon name="download-outline"></ion-icon>
+    <ion-icon  name="chatbubble-outline"></ion-icon>
+  </div>
+</div>
+
+<ion-card style="height: 33%;width: 94%; background-image: url('https://media.istockphoto.com/id/1425839231/photo/luxurious-interior-of-traditional-english-restaurant.webp?b=1&s=170667a&w=0&k=20&c=AMkhtcu2FGZAJkjK0_r9LXXQHvLXHsoZ8VbFhzxSZlM=');">
+  <div style="display: flex;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Priyanka-chopra-gesf-2018-7565.jpg" class="card-img-top" style="height: 17%;width: 12%;border-radius: 50%;padding: 5px;">
+  <ion-text class="name">Priyanka Kupaa</ion-text>
+  <div style="margin-left: 100px; margin-top: 20px;">
+  <ion-icon style="width: 18px;
+  height: 20px;
+  flex-shrink: 0; color: white;" name="create-outline"></ion-icon>
+  <ion-icon style="width: 18px;
+  height: 20px;
+  flex-shrink: 0; color: white; margin-left: 10px;" name="trash-outline"></ion-icon>
+  </div>
+</div>
+
+</ion-card>
+<div class="review">
+<ion-text >I tasted this cocktail.It was awesome <br>
+  #Prism</ion-text>
+  
+ <div style="float: right; font-size: 25px; margin-right: 1rem; margin-top: 1%;">
+  <ion-icon style="margin-left: 200px;" name="download-outline"></ion-icon>
+  <ion-icon style="margin-left: 10px;" name="chatbubble-outline"></ion-icon>
+</div>
+</div>
+
+
+<!-- <ion-card class="card1">
+  <div style="display: flex;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Priyanka-chopra-gesf-2018-7565.jpg" class="img">
+  <ion-text class="name">Priyanka Kupaa</ion-text>
+  <div style="margin-left: 100px; margin-top: 20px;">
+  <ion-icon style="width: 18px;
+  height: 20px;
+  flex-shrink: 0; color: white;" name="create-outline"></ion-icon>
+  <ion-icon style="width: 18px;
+  height: 20px;
+  flex-shrink: 0; color: white; margin-left: 10px;" name="trash-outline"></ion-icon>
+  </div>
+</div>
+
+</ion-card>
+<div class="review">
+<ion-text >I tasted this cocktail.It was awesome <br>
+  &nbsp;&nbsp;&nbsp; #Prism</ion-text>
+ 
+  <ion-icon style="margin-left: 200px;" name="download-outline"></ion-icon>
+  <ion-icon style="margin-left: 10px;" name="chatbubble-outline"></ion-icon>
+
+</div> -->
+
+
+</ion-content>
